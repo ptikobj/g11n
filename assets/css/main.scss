@@ -1,0 +1,164 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+// Tachyons.io CSS framework
+@import "tachyons/tachyons";
+
+// Fontawesome: importing core styling file
+@import "./fontawesome/scss/fontawesome.scss";
+
+// Fontawesome: our project needs Brands
+@import "./fontawesome/scss/brands.scss";
+
+// Custom fonts
+@import "fonts";
+
+.sans-serif {
+  font-family: 'Arimo', sans-serif;
+}
+
+.typewriter {
+  font-family: 'Courier New', 'Courier', 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+}
+
+.bg-baby-powder {
+  background: #fefefa;
+}
+
+.ctr-align {
+  align-items: center;
+}
+
+img {
+  max-height: 100%;
+}
+
+// Custom styles for blog/post pages to avoid using JavaScript
+@media screen and (min-width: 30em) {
+
+  .blogpost h1,
+  .blogpost h2,
+  .exhibition h1,
+  .exhibition h2 {
+    // .f5
+    font-size: 1rem;
+    // .fw1
+    font-weight: 100;
+    // .lh-solid
+    line-height: 1;
+    // .v-top
+    vertical-align:top;
+    // .mt0
+    margin-top:var(--spacing-none);
+  }
+
+  .blogpost h1 + p,
+  .exhibition h1 + p {
+    // .lh-solid
+    line-height: 1;
+  }
+
+  .blogpost h2 ~ p {
+    // .f6
+    font-size: .875rem;
+    // .typewriter
+    font-family: 'Courier New', 'Courier', 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  }
+
+  .blogpost h2 ~ p > a {
+    // .bb
+    border-bottom: 1px solid;
+    // .b--dashed
+    border-style: dashed;
+    // .bl-0
+    border-left-width: 0;
+    // .bt-0
+    border-top-width: 0;
+    // .br-0
+    border-right-width: 0;
+    // .black-90
+    color: var(--black-90);
+    // .link
+    text-decoration: none;
+    transition: color .15s ease-in;
+    // .ma0
+    margin: var(--spacing-none);
+    // .typewriter
+    font-family: 'Courier New', 'Courier', 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  }
+
+  .blogpost h2 ~ p > a:hover,
+  .blogpost h2 ~ p > a:focus {
+    // .hover-red
+    color: var(--red);
+    transition: color .15s ease-in;
+  }
+  .blogpost h2 ~ p > a:active,
+  .blogpost h2 ~ p > a:visited {
+    // .link
+    transition: color .15s ease-in;
+  }
+  // Image captions
+  .blogpost p:has(img) + p,
+  .exhibition p:has(img) + p {
+    // f6 
+    font-size: .875rem;
+    // measure
+    max-width: 30em;
+    // typewriter"
+    font-family: 'Courier New', 'Courier', 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  }
+
+}
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  
+  .blogpost h1,
+  .blogpost h2,
+  .exhibition h1,
+  .exhibition h2 {
+    // .f4-m
+    font-size: 1.25rem;
+  }
+
+  .blogpost h2 ~ p,
+  .exhibition h2 ~ p {
+    // .f5-ns
+    font-size: 1rem;
+  }
+
+  // Image captions
+  .blogpost p:has(img) + p,
+  .exhibition p:has(img) + p {
+    // f5-ns
+    font-size: 1rem;
+  }
+
+}
+
+@media screen and (min-width: 60em) {
+
+  .blogpost h1,
+  .blogpost h2,
+  .exhibition h1,
+  .exhibition h2 {
+    // .f3-l
+    font-size:1.5rem;
+  }
+
+  .blogpost h2 ~ p,
+  .exhibition h2 ~ p {
+    // .f5-ns
+    font-size: 1rem;
+  }
+
+  // Image captions
+  .blogpost p:has(img) + p,
+  .exhibition p:has(img) + p {
+    // f5-ns
+    font-size: 1rem;
+  }
+
+}

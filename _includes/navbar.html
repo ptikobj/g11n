@@ -1,0 +1,13 @@
+{% assign strPage = page.url | remove: ".html" | split: "/" | slice: 1 %}
+<nav class="flex w-100 w-50-ns justify-start justify-end-ns">
+  {% for item in site.data.navigation %}
+    {% assign strLink = item.url | remove: ".html" | split: "/" | slice: 1 %}
+    {% if item.justify == "left" %}
+      <a
+        href="{{ item.url }}" class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib"
+        >{{ item.name }}</a>
+      {% elsif item.justify == "right" %}
+        <a href="{{ item.url }}" {% if page.url == item.url %}class="dn-ns f5 f4-ns black-90 hover-red link mr2 mr3-l pb1 bb bw1"{% else %}class="dn-ns f5 f4-ns black-90 hover-red link mr2 mr3-l"{% endif %}>{{ item.name }}</a>
+    {% endif %}
+  {% endfor %}
+</nav>

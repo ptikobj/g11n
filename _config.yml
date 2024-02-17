@@ -1,0 +1,54 @@
+title: George Chapman
+description: ""
+baseurl: ""
+url: ""
+ga_tag: ""
+collections:
+  paintings:
+    output: true
+  exhibitions:
+    output: true
+  authors:
+
+favicon: "favicon.ico"
+
+# Build settings
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: [""]
+  endings:
+    [
+      html,
+      head,
+      body,
+      li,
+      dt,
+      dd,
+      rt,
+      rp,
+      optgroup,
+      option,
+      colgroup,
+      caption,
+      thead,
+      tbody,
+      tfoot,
+      tr,
+      td,
+      th,
+    ]
+  profile: false
+  blanklines: false
+  ignore:
+    envs: []
+
+plugins:
+  - jekyll-sitemap
+#  - jekyll-feed
+#  - jekyll-seo-tag
+
+exclude:
+  - .jekyll-cache/
