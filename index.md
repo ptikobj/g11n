@@ -22,7 +22,7 @@ title: George Chapman
             css.</p>
           </div>
           <div class='w-100 w-50-l'><img class='db w-100' src=
-          "https://github.com/mrmrs/photos/blob/gh-pages/tachyons/tachyons-theme.jpg?raw=true"></div>
+          ""></div>
         </section>
       </div>
     </article>

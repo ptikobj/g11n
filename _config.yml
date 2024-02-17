@@ -2,7 +2,7 @@ title: George Chapman
 description: ""
 baseurl: ""
 url: ""
-ga_tag: ""
+# ga_tag: ""
 collections:
   paintings:
     output: true
